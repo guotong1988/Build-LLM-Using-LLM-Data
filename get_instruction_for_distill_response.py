@@ -150,7 +150,7 @@ def generate_sft_data(
     model_name: str = "DeepSeek-V3.2",
     mode: str = "online",
     sleep_seconds: float = 0.2,
-    max_workers: int = 8,
+    max_workers: int = 10,
 ) -> None:
     """
     遍历 capability x domain x difficulty，每种组合生成 num_per_combination 条「指令 / prompt」，
@@ -207,10 +207,10 @@ def generate_sft_data(
                 sample = {"instruction": str(parsed)}
         except Exception as e:
             print(
-                f"[WARN] 解析 JSON 失败，将原始内容作为 instruction 使用: "
+                f"[WARN] 解析 JSON 失败，忽略该条数据: "
                 f"cap={cap_key}, dom={dom_key}, diff={diff_key}, idx={idx}, err={e}"
             )
-            sample = {"instruction": content.strip()}
+            return None
 
         # 补充 / 覆盖基础标签，保证元数据齐全
         # 将能力 / 领域写成「大类(子类)」的形式，方便后续分析
