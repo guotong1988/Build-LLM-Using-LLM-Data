@@ -310,7 +310,7 @@ def build_user_prompt(
 
 def generate_data(
     num_per_combination: int = 2,
-    output_path: str = "llm_prompts_cn.jsonl",
+    output_path: str = "distill_instruction_prompt_cn.jsonl",
 ) -> None:
     """
     遍历 capability x domain x difficulty x nlp_task，把每次要传给任意大模型推理接口
