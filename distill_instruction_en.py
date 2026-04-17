@@ -321,8 +321,7 @@ Generate exactly one user question/instruction (instruction/prompt) with these r
 2. Write the instruction in English
 3. Keep it realistic, useful, and representative of the selected capability, domain, difficulty, and NLP task format (the instruction should match the selected NLP task type)
 
-Output only one JSON object with no extra text. The object must contain:
-- "instruction": the user's instruction/prompt text
+Output only one user's instruction/prompt text with no extra text. 
 """.strip()
 
     return prompt
