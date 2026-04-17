@@ -23,3 +23,8 @@ curl http://localhost:8000/v1/chat/completions \
     "max_tokens": 4096
   }'
 ```
+
+# Eval Results
+| **Base Model**   | C-Eval | 
+| ----------- | ------------------------------------- | 
+| Qwen3-32B-Base    | 0.7077                     |
