@@ -272,7 +272,7 @@ def build_user_prompt(
 ) -> str:
     """
     根据能力 / 领域 / 难度 / NLP 任务类型构造给大模型的提示词，
-    让大模型只返回一条「用户指令 / prompt」的 JSON。
+    让大模型只返回一条「用户指令 / prompt」。
     其中每条指令只对应一个最细粒度的能力子项与领域子项。
     """
     # 每条指令只针对一个具体的能力细分项和领域细分项
@@ -317,7 +317,7 @@ def generate_data(
     """
     system_content = (
         "你是一个高质量指令生成助手，负责根据给定的能力、领域、难度与 NLP 任务类型，"
-        "生成用于指令微调的大模型指令（instruction/prompt）。务必严格按照用户要求输出 JSON，"
+        "生成用于指令微调的大模型指令（instruction/prompt）。务必严格按照用户要求输出文本，"
         "且只生成用户指令，不要生成回答。"
     )
 
@@ -348,6 +348,7 @@ def generate_data(
                                         "domain": f"{dom_key}({dom_item})",
                                         "difficulty": diff_key,
                                         "nlp_task": nlp_key,
+                                        "index": i,
                                     }
 
                                     fout.write(json.dumps(record, ensure_ascii=False) + "\n")
