@@ -25,7 +25,7 @@ curl http://localhost:8000/v1/chat/completions \
 ```
 
 ## Eval Results
-| **Base Model**   | **Train Dataset** | **ceval** | **mmlu** | 
-| ----------- | ----------- | ----------- | ----------- |
-| Qwen3-32B-Base  | [Chinese](https://modelscope.cn/datasets/guotong1988/distill-deepseekV3.2-48w-dataset), Non-thinking, 3 Epoch | 0.7077 | 0.8105 |
-| Qwen3-32B-Base  | [Chinese + English](https://modelscope.cn/datasets/guotong1988/distill-deepseekV3.2-48w-dataset), Non-thinking, 3 Epoch | 0.7154 | |
+| **Base Model**   | **Train Dataset** | **ceval** | **mmlu** | **math_500**|
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Qwen3-32B-Base  | [Chinese](https://modelscope.cn/datasets/guotong1988/distill-deepseekV3.2-48w-dataset), Non-thinking, 3 Epoch | 0.7077 | 0.8105 | 0.82 |
+| Qwen3-32B-Base  | [Chinese + English](https://modelscope.cn/datasets/guotong1988/distill-deepseekV3.2-48w-dataset), Non-thinking, 3 Epoch | 0.7154 | | |
