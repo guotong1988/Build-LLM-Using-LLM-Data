@@ -1,5 +1,5 @@
 # Build-LLM-Using-LLM-Data
-Build LLM/MLLM From Scratch Using Only LLM/MLLM Data Distillation
+Build LLM/MLLM From Scratch Using Only LLM/MLLM Data
 
 ## Chat Test
 start vLLM server
