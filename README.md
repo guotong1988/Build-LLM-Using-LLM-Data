@@ -25,7 +25,7 @@ curl http://localhost:8000/v1/chat/completions \
 ```
 
 ## Eval Results
-| **Base Model**   | **Train Dataset** | **ceval** | **cmmlu** | **mmlu** | **math_500**|
+| **Base Model**   | **SFT Dataset** | **ceval** | **cmmlu** | **mmlu** | **math_500**|
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Qwen3-32B-Base  | [Chinese](https://download.csdn.net/download/guotong1988/92837490), Non-thinking, 3 Epoch | 0.7077 | 0.791 | 0.7789 | 0.78 |
 | Qwen3-32B-Base  | [Chinese](https://download.csdn.net/download/guotong1988/92837490) + [English](https://download.csdn.net/download/guotong1988/92837508), Non-thinking, 2 Epoch | 0.7194 | 0.8075 | 0.7871 | 0.8133 |
