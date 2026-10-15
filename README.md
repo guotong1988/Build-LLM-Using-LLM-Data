@@ -11,7 +11,7 @@ CHAT
 curl http://localhost:8001/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "/the_model_path/",
+    "model": "my_model",
     "messages": [
       {"role": "system", "content": "You are a helpful assistant."},
       {"role": "user", "content": "你好"}
