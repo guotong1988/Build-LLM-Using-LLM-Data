@@ -6,9 +6,9 @@ Start vLLM server
 ```
 python3 -m vllm.entrypoints.openai.api_server --model /my_model_path/ --host 0.0.0.0 --port 8001 --served-model-name my_model
 ```
-Request
+CHAT
 ```
-curl http://localhost:8000/v1/chat/completions \
+curl http://localhost:8001/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
     "model": "/the_model_path/",
