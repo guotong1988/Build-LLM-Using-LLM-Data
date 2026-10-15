@@ -2,14 +2,11 @@
 Build LLM/MLLM From Scratch Using LLM/MLLM Data
 
 ## Chat Test
-start vLLM server
+Start vLLM server
 ```
-python3 -m vllm.entrypoints.openai.api_server \
-  --model /the_model_path/ \
-  --host 0.0.0.0 \
-  --port 8000
+python3 -m vllm.entrypoints.openai.api_server --model /my_model_path/ --host 0.0.0.0 --port 8001 --served-model-name my_model
 ```
-do request
+Request
 ```
 curl http://localhost:8000/v1/chat/completions \
   -H "Content-Type: application/json" \
@@ -23,6 +20,11 @@ curl http://localhost:8000/v1/chat/completions \
     "max_tokens": 4096
   }'
 ```
+EVAL
+```
+evalscope eval --model my_model --eval-type openai_api --api-url http://127.0.0.1:8001/v1 --api-key EMPTY --datasets ceval --generation-config '{"max_tokens":6000}' --limit 10
+```
+
 
 ## Eval Results
 | **Base Model**   | **SFT Dataset** | **ceval** | **cmmlu** | **mmlu** | **math_500**|
